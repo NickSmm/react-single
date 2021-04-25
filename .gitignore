@@ -1,0 +1,14 @@
+node_modules
+bower_components
+coverage
+npm-debug.log
+yarn.lock
+yarn-error.log
+.DS_Store
+.idea
+.vscode
+dist
+*.tar.gz
+*.zip
+Gemfile.lock
+report.*.json
