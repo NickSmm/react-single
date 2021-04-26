@@ -50,7 +50,10 @@ module.exports = {
                 use: {
                     loader: "babel-loader",
                     options: {
-                        presets: [['@babel/preset-env', {useBuiltIns: 'usage', 'corejs': '2'}]]
+                        presets: [
+                            ['@babel/preset-env', {useBuiltIns: 'usage', 'corejs': '2'}],
+                            '@babel/preset-react'
+                        ]
                     }
                 }
             }
@@ -64,7 +67,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, '../index.html'),
             filename: "index.html",
-            chunks: ['index'],
+            chunks: ['index', 'vendor', 'common'],
             hash: true
         })
     ]
